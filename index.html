@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنجاز - منصة المبدعين الأحرار</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        .hidden-section { display: none; }
+        .step-number { font-size: 5rem; opacity: 0.1; position: absolute; right: -10px; top: -20px; font-weight: 900; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header / Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div onclick="showSection('home')" class="text-3xl font-black text-blue-700 tracking-tighter cursor-pointer">إنجاز</div>
+            <div class="hidden md:flex space-x-reverse space-x-8 font-bold">
+                <button onclick="showSection('home')" class="hover:text-blue-600 transition">الرئيسية</button>
+                <button onclick="showSection('projects')" class="hover:text-blue-600 transition text-slate-600">تصفح الفرص</button>
+                <button onclick="showSection('how-it-works')" class="hover:text-blue-600 transition text-slate-600">كيفية العمل</button>
+                <button onclick="showSection('verification')" class="hover:text-red-600 transition text-red-500 underline decoration-2 underline-offset-4">شروط التوثيق</button>
+                <button onclick="showSection('pricing')" class="hover:text-blue-600 transition text-slate-600">الباقات</button>
+            </div>
+            <div class="flex items-center space-x-reverse space-x-4">
+                <button class="font-bold text-slate-600 hover:text-blue-600">دخول</button>
+                <button class="bg-blue-700 text-white px-7 py-2.5 rounded-full font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-200">ابدأ الآن</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Home Section -->
+        <section id="home" class="active-section">
+            <div class="hero-gradient text-white py-28 px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">إبداعك يستحق منصة تنصفك!</h1>
+                    <p class="text-xl md:text-2xl mb-12 text-blue-100 opacity-90 font-light">في "إنجاز" نوفر لك سوقاً حراً بعمولة 10% فقط، وشفافية مطلقة تضمن حق المحترفين وأصحاب المشاريع.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <button onclick="showSection('projects')" class="bg-white text-blue-900 px-12 py-5 rounded-2xl font-black text-xl hover:bg-slate-100 transition shadow-2xl">ابحث عن عمل</button>
+                        <button class="bg-blue-600 text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-blue-500 border border-blue-400 transition">أضف مشروعك</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fast Stats -->
+            <div class="max-w-7xl mx-auto -mt-12 px-6 grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-blue-600">
+                    <div class="text-4xl font-black text-blue-700 mb-2">%10</div>
+                    <div class="text-slate-500 font-bold">عمولة عادلة ومنافسة</div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-blue-400">
+                    <div class="text-4xl font-black text-blue-500 mb-2">24h</div>
+                    <div class="text-slate-500 font-bold">توثيق الهوية الاحترافي</div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-slate-300">
+                    <div class="text-4xl font-black text-slate-800 mb-2">2</div>
+                    <div class="text-slate-500 font-bold">فرص يومية مجانية</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="hidden-section py-20 px-6 max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black text-center mb-20 text-blue-900">رحلة النجاح في إنجاز</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="relative p-10 bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100">
+                    <div class="step-number text-blue-600">1</div>
+                    <h3 class="text-2xl font-black mb-4 relative z-10">لأصحاب الأعمال</h3>
+                    <p class="text-slate-600 relative z-10 leading-loose">قم بوصف المهمة التي تحتاج لإنجازها، حدد الميزانية، وستصلك عروض من أفضل الخبراء الموثقين لدينا فوراً.</p>
+                </div>
+                <div class="relative p-10 bg-white rounded-3xl shadow-sm overflow-hidden border-t-4 border-blue-600 shadow-lg">
+                    <div class="step-number text-blue-600">2</div>
+                    <h3 class="text-2xl font-black mb-4 relative z-10">للمحترفين</h3>
+                    <p class="text-slate-600 relative z-10 leading-loose">قدم عرضك الفني، وضّح خبرتك، وابدأ العمل بمجرد قبول العرض. نحن نضمن لك بيئة عمل منظمة وسهلة.</p>
+                </div>
+                <div class="relative p-10 bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100">
+                    <div class="step-number text-blue-600">3</div>
+                    <h3 class="text-2xl font-black mb-4 relative z-10">الأمان المالي</h3>
+                    <p class="text-slate-600 relative z-10 leading-loose">يتم تأمين ميزانية العمل داخل المنصة، وبمجرد تسليم المخرجات المتفق عليها، يتم تحرير الدفعة لمحفظتك بكل سلاسة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verification Section -->
+        <section id="verification" class="hidden-section py-20 px-6 max-w-5xl mx-auto">
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl border-2 border-red-50">
+                <h2 class="text-4xl font-black text-center mb-6 text-red-600">معايير التوثيق والاعتماد</h2>
+                <p class="text-center text-slate-500 mb-12 font-bold">للحفاظ على جودة الخدمات، نطبق معايير صارمة لتوثيق حسابات المحترفين:</p>
+                
+                <div class="grid gap-6">
+                    <div class="flex items-start gap-6 p-6 bg-slate-50 rounded-2xl">
+                        <div class="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full font-black flex-shrink-0">1</div>
+                        <div>
+                            <h4 class="font-black text-xl mb-2 text-blue-900">التحقق من الهوية (خلال 24 ساعة)</h4>
+                            <p class="text-slate-600">يتطلب العمل في إنجاز رفع صورة الهوية الشخصية للمراجعة. فريقنا يقوم بالتدقيق ومنح علامة التوثيق خلال يوم عمل واحد.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 p-6 bg-slate-50 rounded-2xl">
+                        <div class="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full font-black flex-shrink-0">2</div>
+                        <div>
+                            <h4 class="font-black text-xl mb-2 text-blue-900">ربط الهاتف المحمول</h4>
+                            <p class="text-slate-600">يجب تأكيد رقم الهاتف عبر كود تفعيل سري لضمان أمن حسابك وسرعة التواصل وسحب المستحقات المالية.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 p-6 bg-slate-50 rounded-2xl">
+                        <div class="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full font-black flex-shrink-0">3</div>
+                        <div>
+                            <h4 class="font-black text-xl mb-2 text-blue-900">معرض الأعمال (أدنى حد: 3 أعمال)</h4>
+                            <p class="text-slate-600">يجب إضافة 3 نماذج عمل سابقة على الأقل تظهر احترافيتك قبل التمكن من تقديم عروضك على المشاريع المطروحة.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 p-6 bg-slate-50 rounded-2xl">
+                        <div class="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full font-black flex-shrink-0">4</div>
+                        <div>
+                            <h4 class="font-black text-xl mb-2 text-blue-900">تحديد التخصص والمهارات</h4>
+                            <p class="text-slate-600">بناء ملف مهارات دقيق يضمن ظهورك للعملاء المناسبين ويحسن من فرص قبول عروضك الفنية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="hidden-section py-20 px-6 max-w-7xl mx-auto">
+            <h2 class="text-3xl font-black mb-12 text-blue-900">الفرص المتاحة لإنجازها</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 card-hover shadow-sm flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex-1 text-right">
+                        <h3 class="text-xl font-black mb-3 text-blue-800">برمجة متجر إلكتروني متكامل</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">نبحث عن خبير في تطوير المتاجر الإلكترونية لربط بوابات الدفع وشحن المنتجات بشكل آلي...</p>
+                        <div class="flex gap-3">
+                            <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-xs font-bold">برمجة ويب</span>
+                            <span class="bg-slate-100 text-slate-500 px-4 py-1 rounded-full text-xs font-bold">منذ 10 دقائق</span>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <div class="text-2xl font-black text-slate-900 mb-2">$800 - $1500</div>
+                        <button class="bg-blue-700 text-white px-10 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-100">قدم عرضك</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="hidden-section py-20 px-6 max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black text-center mb-16 text-blue-900">باقات مصممة لنموك</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl text-center">
+                    <div class="text-blue-600 font-black mb-4 uppercase">الباقة الأساسية</div>
+                    <div class="text-4xl font-black mb-8">$0 <span class="text-lg text-slate-400">/سنة</span></div>
+                    <ul class="text-slate-600 space-y-4 mb-10 text-right">
+                        <li>✅ 2 عرض يومياً مجاناً</li>
+                        <li>✅ عمولة المنصة 10%</li>
+                        <li>✅ دعم فني قياسي</li>
+                    </ul>
+                    <button class="w-full border-2 border-blue-600 text-blue-600 py-4 rounded-2xl font-black hover:bg-blue-50 transition">ابدأ مجاناً</button>
+                </div>
+                <div class="bg-blue-700 p-10 rounded-[3rem] shadow-2xl text-center text-white transform scale-105 border-4 border-blue-400">
+                    <div class="text-yellow-400 font-black mb-4 uppercase text-xs tracking-widest">المحترف</div>
+                    <div class="text-4xl font-black mb-8">$40 <span class="text-lg text-blue-200">/سنة</span></div>
+                    <ul class="space-y-4 mb-10 text-right">
+                        <li>✅ 10 عروض يومياً</li>
+                        <li>✅ عمولة المنصة 8% فقط</li>
+                        <li>✅ سحب أرباح سريع</li>
+                        <li>✅ شارة التوثيق الذهبية</li>
+                    </ul>
+                    <button class="w-full bg-white text-blue-700 py-4 rounded-2xl font-black hover:bg-slate-100 transition shadow-lg">ترقية الحساب</button>
+                </div>
+                <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl text-center">
+                    <div class="text-slate-900 font-black mb-4 uppercase">باقة الأعمال</div>
+                    <div class="text-4xl font-black mb-8">$85 <span class="text-lg text-slate-400">/سنة</span></div>
+                    <ul class="text-slate-600 space-y-4 mb-10 text-right">
+                        <li>✅ عروض لا نهائية</li>
+                        <li>✅ عمولة المنصة 5% فقط</li>
+                        <li>✅ سحب أرباح فوري</li>
+                        <li>✅ أولوية الظهور</li>
+                    </ul>
+                    <button class="w-full border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-black hover:bg-slate-50 transition">اشترك الآن</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 border-b border-slate-800 pb-16 mb-8 text-right">
+            <div class="col-span-2">
+                <div class="text-3xl font-black text-white mb-6">إنجاز</div>
+                <p class="max-w-sm">منصة عربية مستقلة تهدف لتمكين المبدعين وأصحاب المشاريع من خلال بيئة عمل آمنة، عادلة، وبأقل عمولة ممكنة.</p>
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">F</a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition">X</a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition">In</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">روابط سريعة</h4>
+                <ul class="space-y-4">
+                    <li><button onclick="showSection('projects')" class="hover:text-white transition">تصفح الفرص</button></li>
+                    <li><button onclick="showSection('verification')" class="hover:text-white transition text-red-400">شروط التوثيق</button></li>
+                    <li><button onclick="showSection('pricing')" class="hover:text-white transition">الباقات</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">المساعدة</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="hover:text-white transition">مركز الدعم</a></li>
+                    <li><a href="#" class="hover:text-white transition">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-sm">منصة إنجاز © 2026 - جميع الحقوق محفوظة.</div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = ['home', 'projects', 'how-it-works', 'pricing', 'verification'];
+            sections.forEach(s => {
+                document.getElementById(s).style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        window.onload = () => {
+            showSection('home');
+        };
+    </script>
+</body>
+</html>
