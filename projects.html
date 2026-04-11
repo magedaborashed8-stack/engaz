@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصفح المشاريع - إنجاز</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
+        .project-card:hover { transform: translateY(-3px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-white shadow-sm py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-700">إنجاز</a>
+            <div class="flex gap-4">
+                <a href="login.html" class="text-slate-600 font-bold hover:text-blue-600 transition">دخول</a>
+                <a href="register.html" class="bg-blue-700 text-white px-5 py-2 rounded-xl font-bold hover:bg-blue-800 transition">ابدأ الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto py-12 px-6">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-black text-slate-800">أحدث المشاريع المفتوحة</h1>
+            <div class="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-bold text-sm">
+                تم إيجاد 12 مشروع جديد
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 project-card">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-blue-900 hover:text-blue-700 cursor-pointer">تصميم هوية بصرية لشركة تقنية</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">مفتوح</span>
+                </div>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">نبحث عن مصمم محترف لإنشاء شعار وباقة هوية كاملة تشمل الألوان والخطوط لشركة برمجيات ناشئة...</p>
+                <div class="flex flex-wrap justify-between items-center gap-4 border-t border-slate-50 pt-4">
+                    <div class="flex gap-4 text-xs font-bold text-slate-400">
+                        <span>💰 ميزانية: $250 - $500</span>
+                        <span>⏱️ منذ ساعتين</span>
+                        <span>👥 عروض: 5</span>
+                    </div>
+                    <button class="bg-slate-100 text-slate-700 px-6 py-2 rounded-lg font-bold hover:bg-blue-700 hover:text-white transition">تصفح التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 project-card">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-blue-900 hover:text-blue-700 cursor-pointer">برمجة تطبيق توصيل طلبات (أندرويد)</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">مفتوح</span>
+                </div>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">نحتاج لمبرمج تطبيقات خبير بلغة Flutter أو Java لبناء تطبيق توصيل بسيط يربط بين المحلات والزبائن...</p>
+                <div class="flex flex-wrap justify-between items-center gap-4 border-t border-slate-50 pt-4">
+                    <div class="flex gap-4 text-xs font-bold text-slate-400">
+                        <span>💰 ميزانية: $1500 - $3000</span>
+                        <span>⏱️ منذ 5 ساعات</span>
+                        <span>👥 عروض: 12</span>
+                    </div>
+                    <button class="bg-slate-100 text-slate-700 px-6 py-2 rounded-lg font-bold hover:bg-blue-700 hover:text-white transition">تصفح التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 project-card">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-blue-900 hover:text-blue-700 cursor-pointer">كتابة مقالات في مجال التقنية والذكاء الاصطناعي</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold">مفتوح</span>
+                </div>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">مطلوب كاتب محتوى متخصص لكتابة 10 مقالات حصرية باللغة العربية حول مستقبل الذكاء الاصطناعي...</p>
+                <div class="flex flex-wrap justify-between items-center gap-4 border-t border-slate-50 pt-4">
+                    <div class="flex gap-4 text-xs font-bold text-slate-400">
+                        <span>💰 ميزانية: $50 - $100</span>
+                        <span>⏱️ منذ يوم واحد</span>
+                        <span>👥 عروض: 8</span>
+                    </div>
+                    <button class="bg-slate-100 text-slate-700 px-6 py-2 rounded-lg font-bold hover:bg-blue-700 hover:text-white transition">تصفح التفاصيل</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-10 text-slate-400 text-sm">
+        جميع الحقوق محفوظة لمنصة إنجاز © 2026
+    </footer>
+
+</body>
+</html>
