@@ -9,32 +9,32 @@
     <style>
         body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
         .hidden-section { display: none; }
-        .step-number { font-size: 5rem; opacity: 0.1; position: absolute; right: -10px; top: -20px; font-weight: 900; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div onclick="showSection('home')" class="text-3xl font-black text-blue-700 tracking-tighter cursor-pointer">إنجاز</div>
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100 font-bold">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-right">
+            
+            <a href="index.html" class="text-3xl font-black text-blue-700 tracking-tighter cursor-pointer">إنجاز</a>
+            
             <div class="hidden md:flex space-x-reverse space-x-8 font-bold">
-                <button onclick="showSection('home')" class="hover:text-blue-600 transition font-bold">الرئيسية</button>
-                <a href="projects.html" class="hover:text-blue-600 transition text-slate-600 font-bold">تصفح الفرص</a>
-                <button onclick="showSection('how-it-works')" class="hover:text-blue-600 transition text-slate-600">كيفية العمل</button>
-                <button onclick="showSection('verification')" class="hover:text-red-600 transition text-red-500 underline decoration-2 underline-offset-4">شروط التوثيق</button>
-                <button onclick="showSection('pricing')" class="hover:text-blue-600 transition text-slate-600">الباقات</button>
+                <a href="index.html" class="text-blue-700">الرئيسية</a>
+                <a href="projects.html" class="text-slate-600 hover:text-blue-600 transition">تصفح الفرص</a>
+                <button onclick="showSection('how-it-works')" class="text-slate-600 hover:text-blue-600">كيفية العمل</button>
+                <button onclick="showSection('verification')" class="text-red-500 hover:text-red-600 underline underline-offset-4">شروط التوثيق</button>
+                <button onclick="showSection('pricing')" class="text-slate-600 hover:text-blue-600 transition font-bold">الباقات</button>
             </div>
+
             <div class="flex items-center space-x-reverse space-x-4">
-                <a href="login.html" class="font-bold text-slate-600 hover:text-blue-600 transition">دخول</a>
-                <a href="register.html" class="bg-blue-700 text-white px-7 py-2.5 rounded-full font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-200 text-center">ابدأ الآن</a>
+                <a href="login.html" class="text-slate-600 hover:text-blue-600 transition font-bold">دخول</a>
+                <a href="register.html" class="bg-blue-700 text-white px-7 py-2.5 rounded-full font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-200">ابدأ الآن</a>
             </div>
         </div>
     </nav>
 
     <main id="main-content">
-        
         <section id="home" class="active-section">
             <div class="hero-gradient text-white py-28 px-6 text-center">
                 <div class="max-w-4xl mx-auto">
@@ -65,24 +65,21 @@
         </section>
 
         <section id="add-project" class="hidden-section py-20 px-6 max-w-4xl mx-auto">
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 text-right">
                 <h2 class="text-3xl font-black mb-8 text-blue-900 border-r-8 border-blue-600 pr-4">انشر مشروعك الجديد</h2>
-                
-                <div class="space-y-6 text-right">
+                <form onsubmit="event.preventDefault(); alert('تم استلام مشروعك بنجاح! سيتم مراجعته.'); showSection('home');" class="space-y-6">
                     <div>
                         <label class="block font-bold mb-2 text-slate-700">عنوان المشروع</label>
-                        <input type="text" placeholder="مثلاً: مطلوب تصميم شعار احترافي" class="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none transition">
+                        <input type="text" required placeholder="مثلاً: مطلوب تصميم شعار احترافي" class="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none transition">
                     </div>
-
                     <div>
                         <label class="block font-bold mb-2 text-slate-700">التفاصيل والمتطلبات</label>
-                        <textarea rows="5" placeholder="اشرح ما تحتاجه بدقة لضمان عروض احترافية..." class="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none transition"></textarea>
+                        <textarea rows="5" required placeholder="اشرح ما تحتاجه بدقة لضمان عروض احترافية..." class="w-full p-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none transition"></textarea>
                     </div>
-
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block font-bold mb-2 text-slate-700">الميزانية المتوقعة ($)</label>
-                            <select class="w-full p-4 rounded-xl border border-slate-200 outline-none appearance-none bg-white">
+                            <select class="w-full p-4 rounded-xl border border-slate-200 outline-none bg-white font-bold">
                                 <option>25$ - 50$</option>
                                 <option>50$ - 100$</option>
                                 <option>100$ - 500$</option>
@@ -91,98 +88,58 @@
                         </div>
                         <div>
                             <label class="block font-bold mb-2 text-slate-700">مدة التنفيذ (أيام)</label>
-                            <input type="number" placeholder="مثلاً: 5" class="w-full p-4 rounded-xl border border-slate-200 outline-none">
+                            <input type="number" required placeholder="مثلاً: 5" class="w-full p-4 rounded-xl border border-slate-200 outline-none font-bold">
                         </div>
                     </div>
-
-                    <button onclick="alert('تم استلام مشروعك بنجاح! سيتم نشره بعد المراجعة.')" class="w-full bg-blue-700 text-white py-5 rounded-2xl font-black text-xl hover:bg-blue-800 transition shadow-lg shadow-blue-200">انشر المشروع الآن</button>
-                    
-                    <button onclick="showSection('home')" class="w-full text-slate-400 font-bold hover:text-slate-600 transition">إلغاء والعودة</button>
-                </div>
+                    <button type="submit" class="w-full bg-blue-700 text-white py-5 rounded-2xl font-black text-xl hover:bg-blue-800 transition shadow-lg">انشر المشروع الآن</button>
+                    <button type="button" onclick="showSection('home')" class="w-full text-slate-400 font-bold mt-4 hover:text-slate-600 transition">إلغاء والعودة</button>
+                </form>
             </div>
         </section>
 
-        <section id="how-it-works" class="hidden-section py-20 px-6 max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-20 text-blue-900">رحلة النجاح في إنجاز</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="relative p-10 bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100">
-                    <div class="step-number text-blue-600">1</div>
-                    <h3 class="text-2xl font-black mb-4 relative z-10">لأصحاب الأعمال</h3>
-                    <p class="text-slate-600 relative z-10 leading-loose">قم بوصف المهمة التي تحتاج لإنجازها، حدد الميزانية، وستصلك عروض من أفضل الخبراء الموثقين لدينا فوراً.</p>
-                </div>
-                <div class="relative p-10 bg-white rounded-3xl shadow-sm overflow-hidden border-t-4 border-blue-600 shadow-lg">
-                    <div class="step-number text-blue-600">2</div>
-                    <h3 class="text-2xl font-black mb-4 relative z-10">للمحترفين</h3>
-                    <p class="text-slate-600 relative z-10 leading-loose">قدم عرضك الفني، وضّح خبرتك، وابدأ العمل بمجرد قبول العرض. نحن نضمن لك بيئة عمل منظمة وسهلة.</p>
-                </div>
-                <div class="relative p-10 bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100">
-                    <div class="step-number text-blue-600">3</div>
-                    <h3 class="text-2xl font-black mb-4 relative z-10">الأمان المالي</h3>
-                    <p class="text-slate-600 relative z-10 leading-loose">يتم تأمين ميزانية العمل داخل المنصة، وبمجرد تسليم المخرجات المتفق عليها، يتم تحرير الدفعة لمحفظتك بكل سلاسة.</p>
-                </div>
-            </div>
+        <section id="how-it-works" class="hidden-section py-20 px-6 max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-black text-blue-900 mb-10">كيف يعمل إنجاز؟</h2>
+            <p class="text-slate-500 font-bold">هنا تضع خطوات العمل التي شرحناها سابقاً...</p>
+            <button onclick="showSection('home')" class="mt-8 text-blue-600 font-black">عودة للرئيسية</button>
         </section>
 
-        <section id="verification" class="hidden-section py-20 px-6 max-w-5xl mx-auto">
-            <div class="bg-white p-12 rounded-[3rem] shadow-2xl border-2 border-red-50">
-                <h2 class="text-4xl font-black text-center mb-6 text-red-600">معايير التوثيق والاعتماد</h2>
-                <p class="text-center text-slate-500 mb-12 font-bold">للحفاظ على جودة الخدمات، نطبق معايير صارمة لتوثيق حسابات المحترفين:</p>
-                <div class="grid gap-6">
-                    <div class="flex items-start gap-6 p-6 bg-slate-50 rounded-2xl">
-                        <div class="bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-full font-black flex-shrink-0">1</div>
-                        <div><h4 class="font-black text-xl mb-2 text-blue-900">التحقق من الهوية</h4><p class="text-slate-600">مراجعة الهوية تتم خلال 24 ساعة.</p></div>
-                    </div>
-                </div>
-            </div>
+        <section id="verification" class="hidden-section py-20 px-6 max-w-7xl mx-auto text-center font-bold">
+            <h2 class="text-4xl font-black text-red-600 mb-10">شروط التوثيق</h2>
+            <p>يجب رفع الهوية الشخصية ورابط أعمالك للمراجعة خلال 24 ساعة.</p>
+            <button onclick="showSection('home')" class="mt-8 text-blue-600 font-black">عودة للرئيسية</button>
         </section>
 
-        <section id="projects" class="hidden-section py-20 px-6 max-w-7xl mx-auto">
-            <h2 class="text-3xl font-black mb-12 text-blue-900">الفرص المتاحة لإنجازها</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 card-hover shadow-sm flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div class="flex-1 text-right">
-                        <h3 class="text-xl font-black mb-3 text-blue-800">برمجة متجر إلكتروني متكامل</h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">نبحث عن خبير في تطوير المتاجر الإلكترونية...</p>
-                        <div class="flex gap-3">
-                            <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-xs font-bold">برمجة ويب</span>
-                        </div>
-                    </div>
-                    <div class="text-center md:text-left">
-                        <div class="text-2xl font-black text-slate-900 mb-2">$800 - $1500</div>
-                        <button class="bg-blue-700 text-white px-10 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-100">قدم عرضك</button>
-                    </div>
+        <section id="pricing" class="hidden-section py-20 px-6 max-w-7xl mx-auto text-center font-bold">
+            <h2 class="text-4xl font-black text-blue-900 mb-10">الباقات المتاحة</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                    <h3 class="text-xl font-black mb-4">الباقة المجانية</h3>
+                    <p class="text-slate-500 mb-6">2 عرض يومياً / عمولة 10%</p>
+                    <a href="register.html" class="text-blue-600 underline">اشترك الآن</a>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-blue-600">
+                    <h3 class="text-xl font-black mb-4 text-blue-700">باقة المحترفين</h3>
+                    <p class="text-slate-500 mb-6">عروض غير محدودة / تمييز الحساب</p>
+                    <span class="text-slate-400 font-bold italic">قريباً..</span>
                 </div>
             </div>
-        </section>
-
-        <section id="pricing" class="hidden-section py-20 px-6 max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-16 text-blue-900">باقات مصممة لنموك</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl text-center">
-                    <div class="text-blue-600 font-black mb-4 uppercase">الباقة الأساسية</div>
-                    <div class="text-4xl font-black mb-8">$0 <span class="text-lg text-slate-400">/سنة</span></div>
-                    <button class="w-full border-2 border-blue-600 text-blue-600 py-4 rounded-2xl font-black hover:bg-blue-50 transition">ابدأ مجاناً</button>
-                </div>
-            </div>
+            <button onclick="showSection('home')" class="mt-12 text-blue-600 font-black">عودة للرئيسية</button>
         </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-20 px-6">
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6 mt-20">
         <div class="max-w-7xl mx-auto text-center">
-            <div class="text-3xl font-black text-white mb-6">إنجاز</div>
-            <div class="text-sm">منصة إنجاز © 2026 - جميع الحقوق محفوظة.</div>
+            <div class="text-3xl font-black text-white mb-4">إنجاز</div>
+            <p class="text-sm font-bold opacity-50">جميع الحقوق محفوظة © 2026</p>
         </div>
     </footer>
 
     <script>
         function showSection(sectionId) {
-            // أضفنا 'add-project' للقائمة ليعمل التبديل بين الأقسام
-            const sections = ['home', 'projects', 'how-it-works', 'pricing', 'verification', 'add-project'];
+            const sections = ['home', 'how-it-works', 'verification', 'pricing', 'add-project'];
             sections.forEach(s => {
-                const element = document.getElementById(s);
-                if (element) {
-                    element.style.display = 'none';
-                }
+                const el = document.getElementById(s);
+                if (el) el.style.display = 'none';
             });
             const target = document.getElementById(sectionId);
             if (target) {
@@ -190,10 +147,6 @@
             }
             window.scrollTo(0, 0);
         }
-
-        window.onload = () => {
-            showSection('home');
-        };
     </script>
 </body>
 </html>
