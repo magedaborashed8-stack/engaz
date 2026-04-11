@@ -5,44 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسجيل الدخول - إنجاز</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Tajawal', sans-serif; 
-            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); 
-        }
+        body { font-family: 'Tajawal', sans-serif; }
+        .login-gradient { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white rounded-[2.5rem] shadow-2xl p-10 w-full max-w-md border border-white/20">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-black text-blue-900 mb-2">مرحباً بك مجدداً</h2>
-            <p class="text-slate-500 font-medium">سجل دخولك لمتابعة إنجازاتك في منصة إنجاز</p>
+<body class="login-gradient min-h-screen flex items-center justify-center px-6 py-12">
+
+    <div class="max-w-md w-full bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden">
+        <div class="bg-blue-700 p-8 text-center text-white">
+            <a href="index.html" class="text-3xl font-black tracking-tighter block mb-2">إنجاز</a>
+            <p class="text-blue-100 font-bold opacity-80">مرحباً بك مجدداً في مجتمع المبدعين</p>
         </div>
 
-        <form class="space-y-5" onsubmit="event.preventDefault(); alert('سيتم ربط نظام الدخول الحقيقي قريباً');">
+        <form class="p-10 space-y-6 text-right">
             <div>
-                <label class="block text-right text-sm font-bold text-slate-700 mb-2 mr-1">البريد الإلكتروني</label>
-                <input type="email" placeholder="example@mail.com" required class="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-blue-500 outline-none transition-all shadow-sm">
+                <label class="block font-bold mb-2 text-slate-700">البريد الإلكتروني</label>
+                <input type="email" placeholder="example@mail.com" required 
+                    class="w-full p-4 rounded-2xl border-2 border-slate-100 focus:border-blue-500 outline-none transition font-bold text-left">
             </div>
+
             <div>
-                <label class="block text-right text-sm font-bold text-slate-700 mb-2 mr-1">كلمة المرور</label>
-                <input type="password" placeholder="••••••••" required class="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-blue-500 outline-none transition-all shadow-sm">
+                <label class="block font-bold mb-2 text-slate-700">كلمة المرور</label>
+                <input type="password" placeholder="••••••••" required 
+                    class="w-full p-4 rounded-2xl border-2 border-slate-100 focus:border-blue-500 outline-none transition font-bold text-left">
             </div>
-            
-            <button type="submit" class="w-full bg-blue-700 text-white py-4 rounded-2xl font-black text-lg hover:bg-blue-800 transition-all shadow-xl shadow-blue-100 mt-6">
+
+            <div class="flex justify-between items-center text-sm font-bold">
+                <label class="flex items-center gap-2 text-slate-500 cursor-pointer">
+                    <input type="checkbox" class="w-4 h-4 accent-blue-600"> تذكرني
+                </label>
+                <a href="#" class="text-blue-600 hover:underline">نسيت كلمة المرور؟</a>
+            </div>
+
+            <a href="dashboard.html" 
+                class="block w-full bg-blue-700 text-white text-center py-4 rounded-2xl font-black text-lg hover:bg-blue-800 transition shadow-lg shadow-blue-100">
                 تسجيل الدخول
-            </button>
-        </form>
+            </a>
 
-        <p class="text-center mt-10 text-slate-500 font-medium">
-            ليس لديك حساب؟ 
-            <a href="register.html" class="text-blue-700 font-black hover:underline">أنشئ حسابك الآن</a>
-        </p>
-        
-        <div class="text-center mt-6 border-t border-slate-100 pt-6">
-            <a href="index.html" class="text-slate-400 text-sm hover:text-blue-600 transition-colors font-bold">← العودة للصفحة الرئيسية</a>
-        </div>
+            <div class="text-center pt-4">
+                <p class="text-slate-500 font-bold">ليس لديك حساب؟ 
+                    <a href="register.html" class="text-blue-700 underline underline-offset-4">أنشئ حسابك الآن</a>
+                </p>
+            </div>
+        </form>
     </div>
+
 </body>
 </html>
