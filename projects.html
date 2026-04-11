@@ -6,132 +6,28 @@
     <title>تصفح الفرص - إنجاز</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Tajawal', sans-serif; }
-        .card-shadow { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
-        .modal-bg { background: rgba(15, 23, 42, 0.8); backdrop-blur: 4px; }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-
+<body class="bg-slate-50 text-slate-900 font-bold">
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-3xl font-black text-blue-700 tracking-tighter">إنجاز</a>
-            <div class="hidden md:flex space-x-reverse space-x-8 font-bold">
+            <div class="flex space-x-reverse space-x-8">
                 <a href="index.html" class="text-slate-600 hover:text-blue-700 transition">الرئيسية</a>
-                <a href="projects.html" class="text-blue-700 underline decoration-4 underline-offset-8">تصفح الفرص</a>
+                <a href="projects.html" class="text-blue-700 underline underline-offset-8">تصفح الفرص</a>
                 <a href="login.html" class="text-slate-600 hover:text-blue-600">دخول</a>
             </div>
         </div>
     </nav>
 
-    <section class="bg-blue-900 py-16 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl font-black text-white mb-8">استكشف فرص العمل المتاحة</h1>
-            <div class="flex flex-col md:flex-row gap-4">
-                <input type="text" placeholder="ابحث عن: تصميم شعار، برمجة تطبيق..." class="flex-1 p-4 rounded-2xl outline-none focus:ring-4 focus:ring-blue-500/50 transition">
-                <select class="p-4 rounded-2xl bg-white font-bold outline-none">
-                    <option>كل التخصصات</option>
-                    <option>برمجة وتطوير</option>
-                    <option>تصميم وجرافيك</option>
-                    <option>تسويق إلكتروني</option>
-                </select>
-            </div>
-        </div>
-    </section>
-
     <main class="max-w-5xl mx-auto py-12 px-6">
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="text-2xl font-black text-slate-800">أحدث المشاريع (3)</h2>
-            <span class="text-slate-500 font-bold">رصيدك اليومي: 2 فرصة مجانية</span>
+        <h2 class="text-2xl font-black text-slate-800 mb-10">أحدث المشاريع المتاحة</h2>
+        <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm flex justify-between items-center">
+            <div>
+                <h3 class="text-xl font-black text-blue-900 mb-2">تصميم هوية بصرية كاملة</h3>
+                <p class="text-slate-500">ميزانية: $100 - $250</p>
+            </div>
+            <a href="login.html" class="bg-blue-700 text-white px-8 py-3.5 rounded-xl font-black hover:bg-blue-800 transition">قدم عرضك</a>
         </div>
-
-        <div class="space-y-6">
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 card-shadow flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                <div class="flex-1">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-black tracking-widest uppercase">مفتوح</span>
-                        <span class="text-slate-400 text-sm">منذ ساعتين</span>
-                    </div>
-                    <h3 class="text-xl font-black text-blue-900 mb-2">تصميم هوية بصرية كاملة لشركة ناشئة</h3>
-                    <p class="text-slate-500 mb-4 leading-relaxed">نبحث عن مصمم محترف لعمل لوغو، بطاقات عمل، وقوالب سوشيال ميديا بنمط مودرن ونظيف...</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-100 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600">Adobe Illustrator</span>
-                        <span class="bg-slate-100 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600">براندينج</span>
-                    </div>
-                </div>
-                <div class="text-right w-full md:w-auto border-t md:border-t-0 md:border-r border-slate-100 pt-6 md:pt-0 md:pr-8">
-                    <div class="text-2xl font-black text-slate-900 mb-1">$100 - $250</div>
-                    <div class="text-sm text-slate-400 mb-4 font-bold">مدة التنفيذ: 5 أيام</div>
-                    <button onclick="openApplyModal('تصميم هوية بصرية كاملة')" class="w-full md:w-auto bg-blue-700 text-white px-8 py-3.5 rounded-xl font-black hover:bg-blue-800 transition shadow-lg shadow-blue-100">قدم عرضك</button>
-                </div>
-            </div>
-
-            </div>
     </main>
-
-    <div id="applyModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-6">
-        <div class="fixed inset-0 modal-bg" onclick="closeApplyModal()"></div>
-        <div class="bg-white w-full max-w-2xl rounded-[2.5rem] relative z-10 overflow-hidden shadow-2xl">
-            <div class="bg-blue-700 p-8 text-white">
-                <h3 class="text-2xl font-black">تقديم عرض عمل</h3>
-                <p id="modalProjectTitle" class="opacity-80 mt-1">اسم المشروع هنا</p>
-            </div>
-            
-            <form onsubmit="handleApply(event)" class="p-8 space-y-6 text-right">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block font-bold mb-2 text-slate-700">قيمة العرض ($)</label>
-                        <input type="number" id="offerValue" required oninput="calculateNet()" placeholder="مثلاً: 150" class="w-full p-4 rounded-xl border-2 border-slate-100 focus:border-blue-500 outline-none transition font-bold">
-                    </div>
-                    <div>
-                        <label class="block font-bold mb-2 text-slate-700">مدة التسليم (أيام)</label>
-                        <input type="number" required placeholder="مثلاً: 3" class="w-full p-4 rounded-xl border-2 border-slate-100 focus:border-blue-500 outline-none font-bold">
-                    </div>
-                </div>
-
-                <div class="bg-blue-50 p-4 rounded-xl flex justify-between items-center border border-blue-100">
-                    <span class="text-blue-800 font-bold text-sm">مستحقاتك (بعد خصم 10% عمولة المنصة):</span>
-                    <span id="netAmount" class="text-blue-700 font-black text-xl">$0</span>
-                </div>
-
-                <div>
-                    <label class="block font-bold mb-2 text-slate-700">تفاصيل العرض الفني</label>
-                    <textarea rows="4" required placeholder="اشرح لماذا أنت الشخص المناسب لهذا العمل..." class="w-full p-4 rounded-xl border-2 border-slate-100 focus:border-blue-500 outline-none transition"></textarea>
-                </div>
-
-                <div class="flex gap-4">
-                    <button type="submit" class="flex-1 bg-blue-700 text-white py-4 rounded-2xl font-black text-lg hover:bg-blue-800 transition">إرسال العرض الآن</button>
-                    <button type="button" onclick="closeApplyModal()" class="px-8 py-4 rounded-2xl font-bold text-slate-400 hover:bg-slate-50 transition">إلغاء</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        function openApplyModal(title) {
-            document.getElementById('modalProjectTitle').innerText = title;
-            document.getElementById('applyModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeApplyModal() {
-            document.getElementById('applyModal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        function calculateNet() {
-            const val = document.getElementById('offerValue').value;
-            const net = val - (val * 0.10); // خصم 10% عمولة
-            document.getElementById('netAmount').innerText = val > 0 ? '$' + net.toFixed(2) : '$0';
-        }
-
-        function handleApply(e) {
-            e.preventDefault();
-            alert('تم إرسال عرضك بنجاح! سيصل تنبيه لصاحب المشروع فوراً.');
-            closeApplyModal();
-        }
-    </script>
-
 </body>
 </html>
